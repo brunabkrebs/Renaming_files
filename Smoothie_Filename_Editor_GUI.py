@@ -1,3 +1,10 @@
+"""
+File name: Smoothie_Filename_Editor_GUI.py
+Author: Bruna Krebs Kutche
+Date created: 08/16/2020
+Python version: 3.7
+"""
+
 import tkinter
 from tkinter import *
 from tkinter import filedialog
