@@ -14,14 +14,15 @@ import os
 
 gui = tkinter.Tk()
 gui.title('Smoothie: Filename Editor')
-gui.geometry("550x350")
+gui.geometry("550x375")
 gui.grid_columnconfigure(0,minsize=30)
 gui.grid_columnconfigure(2,minsize=10)
 
 for rows in range(0,11):
     gui.grid_rowconfigure(rows,minsize=20)
 
-taglabel = Label(gui,text='by Bruna Krebs Kutche, 2020', font='Arial 12', fg='#AAB7B8',justify='left', anchor='w').grid(row=18, column=1,sticky=tkinter.W, pady=35)
+taglabel = Label(gui,text='by Bruna Krebs Kutche, 2020', font='Arial 12', fg='#AAB7B8',justify='left', anchor='w').grid(row=18, column=1,sticky=tkinter.W, pady=5)
+emptylabel = Label(gui, text='', width=20, font='Arial 16').grid(row=14,column=1, sticky=tkinter.W, padx=15, pady=15)
 
 #Select directory
 
