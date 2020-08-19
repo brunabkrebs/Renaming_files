@@ -21,6 +21,8 @@ gui.grid_columnconfigure(2,minsize=10)
 for rows in range(0,11):
     gui.grid_rowconfigure(rows,minsize=20)
 
+taglabel = Label(gui,text='by Bruna Krebs Kutche, 2020', font='Arial 12', fg='#AAB7B8',justify='left', anchor='w').grid(row=18, column=1,sticky=tkinter.W, pady=35)
+
 #Select directory
 
 def findfolder():
