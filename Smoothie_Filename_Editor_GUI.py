@@ -55,18 +55,13 @@ def renamefiles():
         newword = newwordentry.get()
 
         for file in os.listdir(currentfolder):
-            if oldword not in file:
-                proccessfailed = Label( gui, text=u'\u2717' + 'Failed', width=20, font='Arial 16' ).grid( row=14, column=1, sticky=tkinter.W, padx=65)
-                break
-            elif oldword in file:
+            if oldword in file:
                 oldname = file
                 newname = file.replace(oldword,newword)
                 oldpathandname = os.path.join(currentfolder, oldname)
                 newpathandname = os.path.join(currentfolder, newname)
                 os.rename(oldpathandname, newpathandname)
-        else:
-            proccessfinished = Label(gui, text=u'\u2713'+'Success!', width=20, font='Arial 16').grid(row=14,column=1, sticky=tkinter.W, padx=65)
-
+        
 renamebutton = tkinter.Button(gui, text="Rename Files", width=20, font='Arial 16', command=renamefiles).grid(row=10,column=1, sticky=tkinter.W, padx=65)
 
 gui.mainloop()
